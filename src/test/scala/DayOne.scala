@@ -25,7 +25,7 @@ class DayOne extends munit.FunSuite {
     assertEquals(sum, 142)
   }
 
-  test("Test decryptCalibration") {
+  test("Test convertWordToIntChar") {
     var decrypterCode = convertWordToIntChar("2eightwo3")
     assertEquals(decrypterCode, "2823")
 

@@ -12,15 +12,12 @@ def predictNextValue(history: List[Int]): Int =
 
   @tailrec
   def getHistory(historyList: List[List[Int]]): List[List[Int]] =
-    if historyList.last.sum == 0 then
-      historyList
+    if historyList.last.sum == 0 then historyList
     else
       val newList = historyList :+ getNextSequence(historyList.last)
       getHistory(newList)
 
-  val accumulatorList: List[List[Int]] = getHistory(List(history))
-
-  accumulatorList.map(_.last).sum
+  getHistory(List(history)).map(_.last).sum
 
 def sumHistoryValues(source: BufferedSource): Int =
   source.getLines

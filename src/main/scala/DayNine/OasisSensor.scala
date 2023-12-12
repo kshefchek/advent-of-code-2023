@@ -8,7 +8,7 @@ def predictNextValue(history: List[Int]): Int =
   def getNextSequence(history: List[Int]): List[Int] =
     val subtrahend = history.tail
     val nextSequence = history.zip(subtrahend)
-    nextSequence.map { case (x, y) => y - x }
+    nextSequence.map { (x, y) => y - x }
 
   @tailrec
   def getHistory(historyList: List[List[Int]]): List[List[Int]] =

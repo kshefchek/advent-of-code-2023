@@ -28,6 +28,10 @@ test:
 run:
 	sbt run
 
+.PHONY: update
+update:
+	sbt update
+
 .PHONY: console
 console:
 	sbt console
